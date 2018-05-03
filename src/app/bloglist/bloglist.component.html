@@ -1,0 +1,38 @@
+<header class="masthead" style="background-image: url('../assets/img/bloglist.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-125">
+        <div class="site-heading">
+          <h1>BlogSpot</h1>
+          <span class="subheading">Create,Edit,View and Delete a Blog</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="post-preview">
+        <div *ngFor="let blog of blogBO">
+          <div class="row">
+            <h2 class="post-title"> {{blog.title}} </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-10 padding0">
+              <h3 class="post-subtitle">{{blog.subtitle}} </h3>
+              <p>Created: {{blog.created}}</p>
+            </div>
+            <div class="col-md-2"></div>
+           <i class="fa fa-trash fa-lg" (click)="delete(blog);"></i>
+           <i class="fa fa-edit fa-lg" (click)="edit(blog);"></i>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="readmore(blog);">ReadMore</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

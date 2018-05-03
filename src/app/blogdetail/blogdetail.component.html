@@ -1,0 +1,36 @@
+<header class="masthead" style="background-image: url('../assets/img/bloglist.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-125">
+          <div class="site-heading">
+            <h1 style="font-size:55px">{{blogBO.title}}</h1>
+            <h2 class="subheading">{{blogBO.subtitle}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="container">
+    
+    <!-- <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="post-preview">
+
+                <div *ngFor="let blog of blogBO">
+                    <h2 class="post-title"> {{blog.title}} </h2>
+                    <h3 class="post-subtitle">{{blog.subtitle}} </h3>
+                    <p>Created: {{blog.created}}</p>
+                    <button type="submit" class="btn btn-primary" (click)="readmore();">ReadMore</button>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+        <div class="col-md-2"></div>
+    </div> -->
+   <div class="readmore-content">{{blogBO.blogBody}}</div>
+   
+   <button type="submit" class="btn btn-primary btn-margin" (click)="Backtolist();">Back to List</button>
+
+</div>

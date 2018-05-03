@@ -1,0 +1,52 @@
+<div class="container">
+ 
+  
+    <h2 class="text-center">Create Blog</h2>
+    <hr>
+ 
+  <form #f="ngForm" [formGroup]="blogform" (ngSubmit)="submitblogForm(f.value , f.valid)">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2"></div>
+          <div class="col-md-8">
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" formControlName="Title">
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-group">
+              <label>Subtitle</label>
+              <input type="text" class="form-control" formControlName="Subtitle">
+            </div>
+          </div>
+        <div class="col-md-2"></div>
+      </div>
+     <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-group">
+              <label>Blog</label>
+              <!-- <input type="text" class="form-control" formControlName="Blog" [(ngModel)]="blogBO.blogBody"> -->
+    
+              <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"class="form-control" formControlName="Blog"></textarea>
+            </div>
+          </div>
+        <div class="col-md-2"></div>
+     </div>
+     
+    </div>
+    <div class="col-md-12 margintop40">
+      <div class="col-md-9">
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </div>
+    </div>
+  </form>
+</div>
